@@ -52,8 +52,7 @@
 }
 
 - (void)dealloc {
-    [super dealloc];
-    [autoCreateDisks release], autoCreateDisks = nil;
+    autoCreateDisks = nil;
 }
 
 #pragma mark -

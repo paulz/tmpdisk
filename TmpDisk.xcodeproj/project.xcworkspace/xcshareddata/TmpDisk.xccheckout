@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>715F1F1B-07F0-432C-AE6F-59C01299FED7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TmpDisk</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D576185F-7EE5-490C-ADDE-C54BD058D1D5</key>
+		<string>https://github.com/adonis627/tmpdisk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TmpDisk.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D576185F-7EE5-490C-ADDE-C54BD058D1D5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/adonis627/tmpdisk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D576185F-7EE5-490C-ADDE-C54BD058D1D5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D576185F-7EE5-490C-ADDE-C54BD058D1D5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tmpdisk</string>
+		</dict>
+	</array>
+</dict>
+</plist>

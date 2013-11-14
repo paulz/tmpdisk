@@ -26,10 +26,6 @@
 
 @synthesize window = _window;
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -96,11 +92,11 @@
 
 - (void)awakeFromNib {
     
-    statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setMenu:statusMenu];
-    [statusItem setImage:[NSImage imageNamed:@"status.png"]];
+    [statusItem setImage:[NSImage imageNamed:@"status"]];
     [statusItem setHighlightMode:YES];
-    
+	
     [self newTmpDiskCreated:nil];
     
     
@@ -164,7 +160,6 @@
                 [ws unmountAndEjectDeviceAtPath:volumePath];
             }
             
-            [ws release];
             
             return;
             
@@ -188,7 +183,6 @@
     
     [ws openFile:volumePath];
     
-    [ws release];
     
 }
 

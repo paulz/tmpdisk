@@ -32,7 +32,7 @@
     NSStatusItem * statusItem;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSWindow *window;
 
 - (void)diskUnmounted:(NSNotification *)notification;
 - (void)newTmpDiskCreated:(NSNotification *)notification;

@@ -85,7 +85,7 @@
     // We need a task to run the sys call to create a new tmpdisk volume
     
     NSTask *task;
-    task = [[[NSTask alloc] init] autorelease];
+    task = [[NSTask alloc] init];
     [task setLaunchPath: @"/bin/sh"];
     
     
@@ -108,7 +108,7 @@
     NSTask *indexTask = nil;
     if (indexed) {
         // If the indexed flag was set we need to run another task to index the drive
-        indexTask = [[[NSTask alloc] init] autorelease];
+        indexTask = [[NSTask alloc] init];
         [indexTask setLaunchPath: @"/bin/sh"];
         
         NSArray *arguments;

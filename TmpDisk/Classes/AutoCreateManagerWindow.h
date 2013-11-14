@@ -30,7 +30,7 @@
     
 }
 
-@property (nonatomic, retain) NSMutableArray *autoCreateDisks;
+@property (nonatomic, strong) NSMutableArray *autoCreateDisks;
 
 - (IBAction)removeEntry:(id)sender;
 

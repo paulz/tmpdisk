@@ -44,7 +44,7 @@
     IBOutlet NSProgressIndicator *spinner;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSWindow *window;
 
 - (IBAction)sizeDidChange:(id)sender;
 - (IBAction)createTmpDisk:(id)sender;

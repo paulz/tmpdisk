@@ -28,7 +28,7 @@
 - (void)awakeFromNib {
     
     NSString * appPath = [[NSBundle mainBundle] bundlePath];
-	CFURLRef url = (CFURLRef)[NSURL fileURLWithPath:appPath]; 
+	CFURLRef url = (__bridge CFURLRef)[NSURL fileURLWithPath:appPath]; 
     
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL,
                                                             kLSSharedFileListSessionLoginItems, NULL);
@@ -37,14 +37,14 @@
         UInt32 seedValue;
         //Retrieve the list of Login Items and cast them to
         // a NSArray so that it will be easier to iterate.
-        NSArray  *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(loginItems, &seedValue);
+        NSArray  *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginItems, &seedValue));
         
         for(int i = 0 ; i< [loginItemsArray count]; i++){
-            LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)[loginItemsArray
+            LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)[loginItemsArray
                                                                         objectAtIndex:i];
             //Resolve the item with URL
             if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &url, NULL) == noErr) {
-                NSString * urlPath = [(NSURL*)url path];
+                NSString * urlPath = [(__bridge NSURL*)url path];
                 if ([urlPath compare:appPath] == NSOrderedSame){
                     
                     // We have a login startup item so set the menu to checked
@@ -53,7 +53,6 @@
                 }
             }
         }
-        [loginItemsArray release];
     }
 
     CFRelease(loginItems);
@@ -63,7 +62,6 @@
 - (IBAction)newTmpDisk:(id)sender {
     
     if ([ntdwc window] == nil) {
-        [ntdwc release];
         
         ntdwc = [[NSWindowController alloc] initWithWindowNibName:@"NewTmpDisk"];
         
@@ -102,7 +100,6 @@
 - (IBAction)manageAutoCreate:(id)sender {
     
     if ([acmwc window] == nil) {
-        [acmwc release];
         
         acmwc = [[NSWindowController alloc] initWithWindowNibName:@"AutoCreateManager"];
         
@@ -121,7 +118,7 @@
     NSMenuItem *button = (NSMenuItem*) sender;
     
     NSString * appPath = [[NSBundle mainBundle] bundlePath];
-	CFURLRef url = (CFURLRef)[NSURL fileURLWithPath:appPath]; 
+	CFURLRef url = (__bridge CFURLRef)[NSURL fileURLWithPath:appPath]; 
     
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL,
                                                             kLSSharedFileListSessionLoginItems, NULL);
@@ -152,20 +149,19 @@
             UInt32 seedValue;
             //Retrieve the list of Login Items and cast them to
             // a NSArray so that it will be easier to iterate.
-            NSArray  *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(loginItems, &seedValue);
+            NSArray  *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginItems, &seedValue));
             
             for(int i = 0 ; i< [loginItemsArray count]; i++){
-                LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)[loginItemsArray
+                LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)[loginItemsArray
                                                                             objectAtIndex:i];
                 //Resolve the item with URL
                 if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &url, NULL) == noErr) {
-                    NSString * urlPath = [(NSURL*)url path];
+                    NSString * urlPath = [(__bridge NSURL*)url path];
                     if ([urlPath compare:appPath] == NSOrderedSame){
                         LSSharedFileListItemRemove(loginItems,itemRef);
                     }
                 }
             }
-            [loginItemsArray release];
         }
         
         

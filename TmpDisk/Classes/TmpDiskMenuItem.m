@@ -41,7 +41,6 @@
         [titleLabel setEditable:NO];
         [titleLabel setSelectable:NO];
         [v addSubview:titleLabel];
-        [titleLabel release];
         
         NSButton *b = [[NSButton alloc] initWithFrame:NSMakeRect(120.0, 0.0, 25.0, 25.0)];
         [b setImage:[NSImage imageNamed:@"eject.png"]];
@@ -66,7 +65,7 @@
     
     if (self) {
         
-        ejectBlock = Block_copy(block);
+        ejectBlock = [block copy];
         
         NSView *v = [[TmpDiskMenuItemView alloc] initWithFrame:NSMakeRect(0.0, 0.0, 150.0, 25.0)];
         [v setAutoresizingMask:NSViewWidthSizable];
@@ -78,7 +77,6 @@
         [titleLabel setEditable:NO];
         [titleLabel setSelectable:NO];
         [v addSubview:titleLabel];
-        [titleLabel release];
         
         /*
          Todo Planned for future release.
