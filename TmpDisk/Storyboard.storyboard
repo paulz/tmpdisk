@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="e9u-1m-PYY">
+            <objects>
+                <application id="rLu-J1-HiG" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="LLN-xg-l5N"/>
+                    <connections>
+                        <outlet property="delegate" destination="n1r-s4-aw5" id="4EF-ZI-PjF"/>
+                    </connections>
+                </application>
+                <menu id="r4M-Nx-oYk">
+                    <items>
+                        <menuItem title="New TmpDisk" id="ccn-SD-Brj">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="newTmpDisk:" target="2Ql-Ef-bgC" id="iOn-3W-vBS"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="d2r-J5-Rie"/>
+                        <menuItem title="Current TmpDisks" id="PK2-Yg-5E3">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <menu key="submenu" title="Current TmpDisks" id="WNi-zd-xEL"/>
+                        </menuItem>
+                        <menuItem title="AutoCreate Manager" id="ew2-Cf-H1f">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="manageAutoCreate:" target="2Ql-Ef-bgC" id="RMO-f7-5iU"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="z3U-Xd-UGz"/>
+                        <menuItem title="Help Center" id="azs-eS-xeP">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="helpCenter:" target="2Ql-Ef-bgC" id="yUD-6f-uY3"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="About TmpDisk" id="tGv-bw-YE4">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="about:" target="2Ql-Ef-bgC" id="XVf-qm-FGa"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="Yia-qE-cOL"/>
+                        <menuItem title="Always Start on Login" id="QAa-c5-1bY">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="startLogin:" target="2Ql-Ef-bgC" id="nyk-Hj-qVE"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Check for Updates" id="Kni-eW-gXC">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="checkForUpdates:" target="nLM-kP-HtB" id="jRL-Rs-8wP"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="lm9-kb-eEU"/>
+                        <menuItem title="Quit" id="fEx-9V-jWY">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="quit:" target="2Ql-Ef-bgC" id="5Iw-2D-D5f"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
+                <customObject id="Pib-CU-t1s" customClass="NSFontManager"/>
+                <customObject id="nLM-kP-HtB" customClass="SUUpdater"/>
+                <customObject id="2Ql-Ef-bgC" customClass="TmpDiskStatusBarListener">
+                    <connections>
+                        <outlet property="startLoginMenuItem" destination="QAa-c5-1bY" id="oNf-G8-vBq"/>
+                    </connections>
+                </customObject>
+                <customObject id="n1r-s4-aw5" customClass="AppDelegate">
+                    <connections>
+                        <outlet property="diskMenu" destination="WNi-zd-xEL" id="KCZ-uP-iY1"/>
+                        <outlet property="statusMenu" destination="r4M-Nx-oYk" id="BIm-ok-syb"/>
+                    </connections>
+                </customObject>
+                <customObject id="pXe-jU-7rf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

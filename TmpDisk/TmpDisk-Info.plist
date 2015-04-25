@@ -28,8 +28,8 @@
 	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2011 Ink Scribbles Pty Ltd. All rights reserved.</string>
-	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<key>NSMainStoryboardFile</key>
+	<string>Storyboard</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUEnableSystemProfiling</key>

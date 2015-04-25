@@ -19,7 +19,6 @@
 		418A28A1144299DE00D4BCB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28A0144299DE00D4BCB0 /* main.m */; };
 		418A28A5144299DE00D4BCB0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 418A28A3144299DE00D4BCB0 /* Credits.rtf */; };
 		418A28A8144299DE00D4BCB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28A7144299DE00D4BCB0 /* AppDelegate.m */; };
-		418A28AB144299DF00D4BCB0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418A28A9144299DE00D4BCB0 /* MainMenu.xib */; };
 		418A28B4144299DF00D4BCB0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418A2894144299DE00D4BCB0 /* Cocoa.framework */; };
 		418A28BC144299DF00D4BCB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 418A28BA144299DF00D4BCB0 /* InfoPlist.strings */; };
 		418A28BF144299DF00D4BCB0 /* TmpDiskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28BE144299DF00D4BCB0 /* TmpDiskTests.m */; };
@@ -31,6 +30,7 @@
 		418DD4C2147DF2E400488297 /* AutoCreateManagerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 418DD4C1147DF2E400488297 /* AutoCreateManagerWindow.m */; };
 		418DF6A0147B57CD0069EEAC /* TmpDiskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418DF69F147B57CD0069EEAC /* TmpDiskManager.m */; };
 		4B689AB21AEB76130046A766 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B689AB11AEB76130046A766 /* Images.xcassets */; };
+		4B689AB61AEB84550046A766 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B689AB51AEB84550046A766 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,6 @@
 		418A28A4144299DE00D4BCB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		418A28A6144299DE00D4BCB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		418A28A7144299DE00D4BCB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		418A28AA144299DF00D4BCB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		418A28B1144299DF00D4BCB0 /* TmpDiskTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TmpDiskTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418A28B9144299DF00D4BCB0 /* TmpDiskTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TmpDiskTests-Info.plist"; sourceTree = "<group>"; };
 		418A28BB144299DF00D4BCB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		418DF69E147B57CD0069EEAC /* TmpDiskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmpDiskManager.h; path = Classes/TmpDiskManager.h; sourceTree = "<group>"; };
 		418DF69F147B57CD0069EEAC /* TmpDiskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TmpDiskManager.m; path = Classes/TmpDiskManager.m; sourceTree = "<group>"; };
 		4B689AB11AEB76130046A766 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4B689AB51AEB84550046A766 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +176,7 @@
 				418A28D41442A09300D4BCB0 /* StatusBar */,
 				418A28A6144299DE00D4BCB0 /* AppDelegate.h */,
 				418A28A7144299DE00D4BCB0 /* AppDelegate.m */,
-				418A28A9144299DE00D4BCB0 /* MainMenu.xib */,
+				4B689AB51AEB84550046A766 /* Storyboard.storyboard */,
 				418A28D51442A2B400D4BCB0 /* NewTmpDisk.xib */,
 				41283F8A147C88B7005EDE88 /* AutoCreateManager.xib */,
 				4B689AB11AEB76130046A766 /* Images.xcassets */,
@@ -318,13 +318,13 @@
 			files = (
 				418A289F144299DE00D4BCB0 /* InfoPlist.strings in Resources */,
 				418A28A5144299DE00D4BCB0 /* Credits.rtf in Resources */,
-				418A28AB144299DF00D4BCB0 /* MainMenu.xib in Resources */,
 				418A28D71442A2B400D4BCB0 /* NewTmpDisk.xib in Resources */,
 				4B689AB21AEB76130046A766 /* Images.xcassets in Resources */,
 				4103FF9214440A2900618177 /* eject.png in Resources */,
 				412EC7E7146DF1C600D569F1 /* eject_a.png in Resources */,
 				418320CE14722EB5000D8488 /* dsa_pub.pem in Resources */,
 				41283F8C147C88B7005EDE88 /* AutoCreateManager.xib in Resources */,
+				4B689AB61AEB84550046A766 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,14 +411,6 @@
 				418A28A4144299DE00D4BCB0 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		418A28A9144299DE00D4BCB0 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				418A28AA144299DF00D4BCB0 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		418A28BA144299DF00D4BCB0 /* InfoPlist.strings */ = {
