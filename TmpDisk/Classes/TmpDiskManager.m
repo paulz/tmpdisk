@@ -24,17 +24,26 @@
 
 @implementation TmpDiskManager
 
++(NSAlert *)infoAlertWithText:(NSString *)text {
+    NSAlert *alert = [NSAlert new];
+    alert.alertStyle = NSWarningAlertStyle;
+    alert.messageText = @"Error Creating TmpDisk";
+    [alert addButtonWithTitle:@"OK"];
+    alert.informativeText = text;
+    return alert;
+}
+
 + (bool)createTmpDiskWithName:(NSString*)name size:(u_int64_t)size autoCreate:(bool)autoCreate indexed:(bool)indexed hidden:(bool)hidden onSuccess:(void (^)())success {
     
     if ([name length] == 0) {
-        NSAlert *a = [NSAlert alertWithMessageText:@"Error Creating TmpDisk" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must provide a Disk Name"];
+        NSAlert *a = [self infoAlertWithText:@"You must provide a Disk Name"];
         [a runModal];
         
         return NO;
     }
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"/Volumes/%@", name] isDirectory:nil]) {
-        NSAlert *a = [NSAlert alertWithMessageText:@"Error Creating TmpDisk" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"A Volume named %@ already exists.", name];
+        NSAlert *a = [self infoAlertWithText:[NSString stringWithFormat:@"A Volume named %@ already exists.", name]];
         [a runModal];
         
         return NO;
