@@ -42,7 +42,8 @@
         for(int i = 0 ; i< [loginItemsArray count]; i++){
             LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)loginItemsArray[i];
             //Resolve the item with URL
-            if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &url, NULL) == noErr) {
+            url = LSSharedFileListItemCopyResolvedURL(itemRef, 0, NULL);
+            if (url) {
                 NSString * urlPath = [(__bridge NSURL*)url path];
                 if ([urlPath compare:appPath] == NSOrderedSame){
                     
@@ -78,18 +79,23 @@
     
 }
 
+- (void )runModalAlertWithMessageText:(NSString *)message informativeText:(NSString *)info {
+    NSAlert *alert = [NSAlert new];
+    alert.alertStyle = NSWarningAlertStyle;
+    alert.messageText = message;
+    alert.informativeText = info;
+    [alert addButtonWithTitle:@"OK"];
+    [alert runModal];
+}
+
 - (IBAction)about:(id)sender {
-    
-    NSAlert *a = [NSAlert alertWithMessageText:@"About TmpDisk" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"TmpDisk was created by @imothee of Ink Scribbles Pty Ltd to help easily create and manage Ram Disks."];
-    [a runModal];
-    
+    [self runModalAlertWithMessageText:@"About TmpDisk"
+                       informativeText:@"TmpDisk was created by @imothee of Ink Scribbles Pty Ltd to help easily create and manage Ram Disks."];
 }
 
 - (IBAction)helpCenter:(id)sender {
-    
-    NSAlert *a = [NSAlert alertWithMessageText:@"TmpDisk Help" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Ram Disks are temporary disks that use your RAM (Memory) for storage. They are incredibly fast and can be very useful when used for performance or temporary files."];
-    [a runModal];
-    
+    [self runModalAlertWithMessageText:@"TmpDisk Help"
+                       informativeText:@"Ram Disks are temporary disks that use your RAM (Memory) for storage. They are incredibly fast and can be very useful when used for performance or temporary files."];
 }
 
 
@@ -153,7 +159,8 @@
             for(int i = 0 ; i< [loginItemsArray count]; i++){
                 LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)loginItemsArray[i];
                 //Resolve the item with URL
-                if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &url, NULL) == noErr) {
+                url = LSSharedFileListItemCopyResolvedURL(itemRef, 0, NULL);
+                if (url) {
                     NSString * urlPath = [(__bridge NSURL*)url path];
                     if ([urlPath compare:appPath] == NSOrderedSame){
                         LSSharedFileListItemRemove(loginItems,itemRef);
