@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4103FF9214440A2900618177 /* eject.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103FF9114440A2900618177 /* eject.png */; };
-		410B9B331456F18C003FE088 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 410B9B321456F18B003FE088 /* icon.icns */; };
 		41283F8C147C88B7005EDE88 /* AutoCreateManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41283F8A147C88B7005EDE88 /* AutoCreateManager.xib */; };
 		412EC7E7146DF1C600D569F1 /* eject_a.png in Resources */ = {isa = PBXBuildFile; fileRef = 412EC7E6146DF1C600D569F1 /* eject_a.png */; };
 		413A37551470B12500C07D59 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A37541470B12500C07D59 /* CoreServices.framework */; };
@@ -31,7 +30,7 @@
 		418A28E81442D05100D4BCB0 /* TmpDiskMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28E71442D05100D4BCB0 /* TmpDiskMenuItemView.m */; };
 		418DD4C2147DF2E400488297 /* AutoCreateManagerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 418DD4C1147DF2E400488297 /* AutoCreateManagerWindow.m */; };
 		418DF6A0147B57CD0069EEAC /* TmpDiskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418DF69F147B57CD0069EEAC /* TmpDiskManager.m */; };
-		49ED470D182EA56400BF7A87 /* status.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49ED470C182EA56400BF7A87 /* status.pdf */; };
+		4B689AB21AEB76130046A766 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B689AB11AEB76130046A766 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,6 @@
 
 /* Begin PBXFileReference section */
 		4103FF9114440A2900618177 /* eject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eject.png; sourceTree = "<group>"; };
-		410B9B321456F18B003FE088 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		41283F8B147C88B7005EDE88 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AutoCreateManager.xib; sourceTree = "<group>"; };
 		412EC7E6146DF1C600D569F1 /* eject_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eject_a.png; sourceTree = "<group>"; };
 		413A37541470B12500C07D59 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -96,7 +94,7 @@
 		418DD4C1147DF2E400488297 /* AutoCreateManagerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoCreateManagerWindow.m; path = Classes/AutoCreateManagerWindow.m; sourceTree = "<group>"; };
 		418DF69E147B57CD0069EEAC /* TmpDiskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmpDiskManager.h; path = Classes/TmpDiskManager.h; sourceTree = "<group>"; };
 		418DF69F147B57CD0069EEAC /* TmpDiskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TmpDiskManager.m; path = Classes/TmpDiskManager.m; sourceTree = "<group>"; };
-		49ED470C182EA56400BF7A87 /* status.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = status.pdf; sourceTree = "<group>"; };
+		4B689AB11AEB76130046A766 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +122,6 @@
 		4103FF9014440A2900618177 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				49ED470C182EA56400BF7A87 /* status.pdf */,
 				412EC7E6146DF1C600D569F1 /* eject_a.png */,
 				4103FF9114440A2900618177 /* eject.png */,
 			);
@@ -174,7 +171,6 @@
 		418A289A144299DE00D4BCB0 /* TmpDisk */ = {
 			isa = PBXGroup;
 			children = (
-				410B9B321456F18B003FE088 /* icon.icns */,
 				4103FF9014440A2900618177 /* Images */,
 				418DF69C147B57A80069EEAC /* TmpDisks */,
 				418A28D41442A09300D4BCB0 /* StatusBar */,
@@ -183,6 +179,7 @@
 				418A28A9144299DE00D4BCB0 /* MainMenu.xib */,
 				418A28D51442A2B400D4BCB0 /* NewTmpDisk.xib */,
 				41283F8A147C88B7005EDE88 /* AutoCreateManager.xib */,
+				4B689AB11AEB76130046A766 /* Images.xcassets */,
 				418A289B144299DE00D4BCB0 /* Supporting Files */,
 			);
 			path = TmpDisk;
@@ -323,9 +320,8 @@
 				418A28A5144299DE00D4BCB0 /* Credits.rtf in Resources */,
 				418A28AB144299DF00D4BCB0 /* MainMenu.xib in Resources */,
 				418A28D71442A2B400D4BCB0 /* NewTmpDisk.xib in Resources */,
+				4B689AB21AEB76130046A766 /* Images.xcassets in Resources */,
 				4103FF9214440A2900618177 /* eject.png in Resources */,
-				410B9B331456F18C003FE088 /* icon.icns in Resources */,
-				49ED470D182EA56400BF7A87 /* status.pdf in Resources */,
 				412EC7E7146DF1C600D569F1 /* eject_a.png in Resources */,
 				418320CE14722EB5000D8488 /* dsa_pub.pem in Resources */,
 				41283F8C147C88B7005EDE88 /* AutoCreateManager.xib in Resources */,
@@ -466,8 +462,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -475,7 +469,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -492,13 +485,12 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -506,7 +498,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -514,6 +505,7 @@
 		418A28C3144299DF00D4BCB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -524,7 +516,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TmpDisk/TmpDisk-Prefix.pch";
 				INFOPLIST_FILE = "TmpDisk/TmpDisk-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -533,6 +524,7 @@
 		418A28C4144299DF00D4BCB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -543,7 +535,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TmpDisk/TmpDisk-Prefix.pch";
 				INFOPLIST_FILE = "TmpDisk/TmpDisk-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
