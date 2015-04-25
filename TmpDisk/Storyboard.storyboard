@@ -84,5 +84,274 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--New Disk View Controller-->
+        <scene sceneID="Mhc-ye-p8E">
+            <objects>
+                <viewController id="OZw-VS-Tjv" userLabel="New Disk View Controller" sceneMemberID="viewController">
+                    <view key="view" id="epa-vS-9a3">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="287"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeu-dJ-5iz">
+                                <rect key="frame" x="175" y="178" width="235" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="You Must Enter a Disk Name" drawsBackground="YES" id="NxB-z7-FOQ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcd-Uq-z4n">
+                                <rect key="frame" x="68" y="183" width="72" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disk Name" id="NVB-ar-iPB">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYw-fY-89G">
+                                <rect key="frame" x="68" y="130" width="62" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disk Size" id="Mgm-dD-x6v">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-YI-TqS">
+                                <rect key="frame" x="169" y="13" width="142" height="32"/>
+                                <buttonCell key="cell" type="push" title="Create TmpDisk" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s86-YJ-ojU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="createTmpDisk:" target="fN0-KN-T2J" id="FUk-uW-mgU"/>
+                                </connections>
+                            </button>
+                            <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="VAy-Ye-wxN">
+                                <rect key="frame" x="224" y="145" width="32" height="32"/>
+                            </progressIndicator>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pIY-f4-Xyb">
+                                <rect key="frame" x="66" y="213" width="347" height="68"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="rhH-xs-XGH">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Warning: When a TmpDisk is ejected or the computer restarted all files on it will be permanently deleted. Please only store temporary files on a TmpDisk.</string>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHz-FE-nqY">
+                                <rect key="frame" x="249" y="124" width="19" height="27"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" increment="16" minValue="16" maxValue="1536" doubleValue="16" id="Q8L-Xx-POS"/>
+                                <connections>
+                                    <action selector="sizeDidChange:" target="fN0-KN-T2J" id="m4k-7S-3h3"/>
+                                </connections>
+                            </stepper>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-om-vrX">
+                                <rect key="frame" x="67" y="84" width="270" height="18"/>
+                                <buttonCell key="cell" type="check" title="AutoCreate When Application Launches" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="MLb-UH-hMm">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVu-Ps-8GR">
+                                <rect key="frame" x="340" y="58" width="109" height="18"/>
+                                <buttonCell key="cell" type="check" title="Index Volume" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ek8-0x-h4L">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIp-a6-9jB">
+                                <rect key="frame" x="340" y="38" width="122" height="18"/>
+                                <buttonCell key="cell" type="check" title="Advanced Mode" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Vuz-Gu-23d">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleAdvancedMode:" target="fN0-KN-T2J" id="Cj1-ZI-Fdc"/>
+                                </connections>
+                            </button>
+                            <button toolTip="Makes the volume invisible in Finder and Open/Save dialogs" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6i0-VZ-Zlk">
+                                <rect key="frame" x="340" y="18" width="103" height="18"/>
+                                <buttonCell key="cell" type="check" title="Hide Volume" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="z2q-fP-ja7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ObG-xx-vwL">
+                                <rect key="frame" x="172" y="127" width="75" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" title="Disksize" id="ZF4-sP-5Da">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="zLc-Q6-5AX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="fN0-KN-T2J" customClass="NewTmpDiskWindow">
+                    <connections>
+                        <outlet property="advancedMode" destination="bIp-a6-9jB" id="fyI-F4-VCv"/>
+                        <outlet property="createDisk" destination="N5d-YI-TqS" id="PrB-ab-SvW"/>
+                        <outlet property="diskAutoCreate" destination="fZF-om-vrX" id="2o5-Ht-f0L"/>
+                        <outlet property="diskHide" destination="6i0-VZ-Zlk" id="k9t-eG-2fa"/>
+                        <outlet property="diskIndex" destination="IVu-Ps-8GR" id="fc8-88-8di"/>
+                        <outlet property="diskName" destination="yeu-dJ-5iz" id="CIg-Cj-EDl"/>
+                        <outlet property="diskNameLabel" destination="Kcd-Uq-z4n" id="sB6-Zt-fOT"/>
+                        <outlet property="diskSize" destination="mHz-FE-nqY" id="VKq-Uk-OXl"/>
+                        <outlet property="diskSizeLabel" destination="eYw-fY-89G" id="4Zw-6V-4le"/>
+                        <outlet property="sizeLabel" destination="ObG-xx-vwL" id="cTu-RU-UT0"/>
+                        <outlet property="spinner" destination="VAy-Ye-wxN" id="khN-AZ-4aw"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="564.5" y="730"/>
+        </scene>
+        <!--New Disk Window Controller-->
+        <scene sceneID="do7-pu-u46">
+            <objects>
+                <windowController storyboardIdentifier="newDiskWinController" id="voj-RD-wrn" userLabel="New Disk Window Controller" sceneMemberID="viewController">
+                    <window key="window" title="Create New Ram Disk" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="auQ-jQ-PKC">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="287"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                    </window>
+                    <connections>
+                        <segue destination="OZw-VS-Tjv" kind="relationship" relationship="window.shadowedContentViewController" id="Tat-mq-9Wk"/>
+                    </connections>
+                </windowController>
+                <customObject id="M6t-UL-1j7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="229.5"/>
+        </scene>
+        <!--AutoCreate Manager Window Controller-->
+        <scene sceneID="FcS-4b-Us0">
+            <objects>
+                <windowController storyboardIdentifier="autoCreateManagerWinController" id="Jfj-zC-TvV" userLabel="AutoCreate Manager Window Controller" sceneMemberID="viewController">
+                    <window key="window" title="AutoCreate Manager" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="qiK-ho-VgY">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                    </window>
+                    <connections>
+                        <segue destination="DA6-0d-1fe" kind="relationship" relationship="window.shadowedContentViewController" id="bLu-Rk-yMf"/>
+                    </connections>
+                </windowController>
+                <customObject id="cQY-wb-rMq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207" y="238"/>
+        </scene>
+        <!--AutoCreate Manager View Controller-->
+        <scene sceneID="swI-OK-5wd">
+            <objects>
+                <viewController id="DA6-0d-1fe" userLabel="AutoCreate Manager View Controller" sceneMemberID="viewController">
+                    <view key="view" id="3eY-fJ-dWo">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDt-wi-mJA">
+                                <rect key="frame" x="65" y="55" width="350" height="160"/>
+                                <clipView key="contentView" id="NoC-4y-Y3c">
+                                    <rect key="frame" x="1" y="17" width="348" height="142"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="T0J-FD-BSm" id="uLY-lC-uNO">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn identifier="name" editable="NO" width="254" minWidth="40" maxWidth="1000" id="qB6-P4-3U9">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="Mxz-Be-679">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                                </tableColumn>
+                                                <tableColumn identifier="size" editable="NO" width="88" minWidth="40" maxWidth="1000" id="jEE-nd-7lh">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Size">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="cBk-fw-AjT">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="WiZ-GI-qNa" id="eJ2-Ck-ges"/>
+                                                <outlet property="delegate" destination="WiZ-GI-qNa" id="GYa-35-39N"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="wdl-mr-YRc">
+                                    <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="03o-j8-vkA">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="T0J-FD-BSm">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="17"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aVm-uM-tZ3">
+                                <rect key="frame" x="62" y="229" width="341" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Volumes Created Automatically When TmpDisk Starts" id="HIL-yK-PAb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gbf-vZ-7wM">
+                                <rect key="frame" x="195" y="12" width="90" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="nKB-II-rnl"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Remove" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EQS-rt-SAK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="removeEntry:" target="WiZ-GI-qNa" id="Rr5-CP-Thy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aVm-uM-tZ3" secondAttribute="trailing" constant="79" id="2uj-Ih-bcf"/>
+                            <constraint firstItem="gbf-vZ-7wM" firstAttribute="centerX" secondItem="3eY-fJ-dWo" secondAttribute="centerX" id="6yu-da-iuj"/>
+                            <constraint firstItem="gbf-vZ-7wM" firstAttribute="top" secondItem="HDt-wi-mJA" secondAttribute="bottom" constant="15" id="G70-i4-RGo"/>
+                            <constraint firstItem="HDt-wi-mJA" firstAttribute="top" secondItem="aVm-uM-tZ3" secondAttribute="bottom" constant="14" id="OgP-ve-Lko"/>
+                            <constraint firstItem="HDt-wi-mJA" firstAttribute="centerY" secondItem="3eY-fJ-dWo" secondAttribute="centerY" id="VZC-vo-FPg"/>
+                            <constraint firstItem="aVm-uM-tZ3" firstAttribute="top" secondItem="3eY-fJ-dWo" secondAttribute="top" constant="24" id="eza-dD-zdW"/>
+                            <constraint firstItem="gbf-vZ-7wM" firstAttribute="centerX" secondItem="HDt-wi-mJA" secondAttribute="centerX" id="qtv-Nv-fEH"/>
+                            <constraint firstItem="aVm-uM-tZ3" firstAttribute="leading" secondItem="3eY-fJ-dWo" secondAttribute="leading" constant="64" id="rdq-o7-38x"/>
+                            <constraint firstItem="HDt-wi-mJA" firstAttribute="leading" secondItem="3eY-fJ-dWo" secondAttribute="leading" constant="65" id="yX1-cz-UKT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="W9V-BB-WQm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="WiZ-GI-qNa" customClass="AutoCreateManagerWindow">
+                    <connections>
+                        <outlet property="autoCreateEntries" destination="uLY-lC-uNO" id="waR-4t-U30"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1207" y="750"/>
+        </scene>
     </scenes>
 </document>

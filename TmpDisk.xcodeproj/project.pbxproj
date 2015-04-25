@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4103FF9214440A2900618177 /* eject.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103FF9114440A2900618177 /* eject.png */; };
-		41283F8C147C88B7005EDE88 /* AutoCreateManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41283F8A147C88B7005EDE88 /* AutoCreateManager.xib */; };
 		412EC7E7146DF1C600D569F1 /* eject_a.png in Resources */ = {isa = PBXBuildFile; fileRef = 412EC7E6146DF1C600D569F1 /* eject_a.png */; };
 		413A37551470B12500C07D59 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A37541470B12500C07D59 /* CoreServices.framework */; };
 		418320CA14722C1D000D8488 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418320C914722C1D000D8488 /* Sparkle.framework */; };
@@ -23,7 +22,6 @@
 		418A28BC144299DF00D4BCB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 418A28BA144299DF00D4BCB0 /* InfoPlist.strings */; };
 		418A28BF144299DF00D4BCB0 /* TmpDiskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28BE144299DF00D4BCB0 /* TmpDiskTests.m */; };
 		418A28D31442A08D00D4BCB0 /* TmpDiskStatusBarListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28D21442A08D00D4BCB0 /* TmpDiskStatusBarListener.m */; };
-		418A28D71442A2B400D4BCB0 /* NewTmpDisk.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418A28D51442A2B400D4BCB0 /* NewTmpDisk.xib */; };
 		418A28DA1442A2F800D4BCB0 /* NewTmpDiskWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28D91442A2F800D4BCB0 /* NewTmpDiskWindow.m */; };
 		418A28E51442CE8D00D4BCB0 /* TmpDiskMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28E41442CE8D00D4BCB0 /* TmpDiskMenuItem.m */; };
 		418A28E81442D05100D4BCB0 /* TmpDiskMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A28E71442D05100D4BCB0 /* TmpDiskMenuItemView.m */; };
@@ -58,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		4103FF9114440A2900618177 /* eject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eject.png; sourceTree = "<group>"; };
-		41283F8B147C88B7005EDE88 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AutoCreateManager.xib; sourceTree = "<group>"; };
 		412EC7E6146DF1C600D569F1 /* eject_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eject_a.png; sourceTree = "<group>"; };
 		413A37541470B12500C07D59 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		418320C914722C1D000D8488 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -82,7 +79,6 @@
 		418A28BE144299DF00D4BCB0 /* TmpDiskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TmpDiskTests.m; sourceTree = "<group>"; };
 		418A28D11442A08D00D4BCB0 /* TmpDiskStatusBarListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmpDiskStatusBarListener.h; path = Classes/TmpDiskStatusBarListener.h; sourceTree = "<group>"; };
 		418A28D21442A08D00D4BCB0 /* TmpDiskStatusBarListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TmpDiskStatusBarListener.m; path = Classes/TmpDiskStatusBarListener.m; sourceTree = "<group>"; };
-		418A28D61442A2B400D4BCB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NewTmpDisk.xib; sourceTree = "<group>"; };
 		418A28D81442A2F800D4BCB0 /* NewTmpDiskWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewTmpDiskWindow.h; path = Classes/NewTmpDiskWindow.h; sourceTree = "<group>"; };
 		418A28D91442A2F800D4BCB0 /* NewTmpDiskWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewTmpDiskWindow.m; path = Classes/NewTmpDiskWindow.m; sourceTree = "<group>"; };
 		418A28E31442CE8D00D4BCB0 /* TmpDiskMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmpDiskMenuItem.h; path = Classes/TmpDiskMenuItem.h; sourceTree = "<group>"; };
@@ -177,8 +173,6 @@
 				418A28A6144299DE00D4BCB0 /* AppDelegate.h */,
 				418A28A7144299DE00D4BCB0 /* AppDelegate.m */,
 				4B689AB51AEB84550046A766 /* Storyboard.storyboard */,
-				418A28D51442A2B400D4BCB0 /* NewTmpDisk.xib */,
-				41283F8A147C88B7005EDE88 /* AutoCreateManager.xib */,
 				4B689AB11AEB76130046A766 /* Images.xcassets */,
 				418A289B144299DE00D4BCB0 /* Supporting Files */,
 			);
@@ -318,12 +312,10 @@
 			files = (
 				418A289F144299DE00D4BCB0 /* InfoPlist.strings in Resources */,
 				418A28A5144299DE00D4BCB0 /* Credits.rtf in Resources */,
-				418A28D71442A2B400D4BCB0 /* NewTmpDisk.xib in Resources */,
 				4B689AB21AEB76130046A766 /* Images.xcassets in Resources */,
 				4103FF9214440A2900618177 /* eject.png in Resources */,
 				412EC7E7146DF1C600D569F1 /* eject_a.png in Resources */,
 				418320CE14722EB5000D8488 /* dsa_pub.pem in Resources */,
-				41283F8C147C88B7005EDE88 /* AutoCreateManager.xib in Resources */,
 				4B689AB61AEB84550046A766 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		41283F8A147C88B7005EDE88 /* AutoCreateManager.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41283F8B147C88B7005EDE88 /* en */,
-			);
-			name = AutoCreateManager.xib;
-			sourceTree = "<group>";
-		};
 		418A289D144299DE00D4BCB0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -419,14 +403,6 @@
 				418A28BB144299DF00D4BCB0 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		418A28D51442A2B400D4BCB0 /* NewTmpDisk.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				418A28D61442A2B400D4BCB0 /* en */,
-			);
-			name = NewTmpDisk.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

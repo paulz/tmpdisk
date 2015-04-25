@@ -60,17 +60,7 @@
 }
 
 - (IBAction)newTmpDisk:(id)sender {
-    
-    if ([ntdwc window] == nil) {
-        
-        ntdwc = [[NSWindowController alloc] initWithWindowNibName:@"NewTmpDisk"];
-        
-        
-    }
-    
-    [[ntdwc window] makeKeyAndOrderFront:nil];
-    [NSApp activateIgnoringOtherApps:YES];
-    
+    ntdwc = [self showControllerWithID:@"newDiskWinController"];
 }
 
 - (IBAction)quit:(id)sender {
@@ -98,21 +88,20 @@
                        informativeText:@"Ram Disks are temporary disks that use your RAM (Memory) for storage. They are incredibly fast and can be very useful when used for performance or temporary files."];
 }
 
+- (NSWindowController *)showControllerWithID:(NSString *)storyboardID {
+    NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    NSParameterAssert(storyboard);
+    NSWindowController *winController = [storyboard instantiateControllerWithIdentifier:storyboardID];
+    [[winController window] makeKeyAndOrderFront:nil];
+    [NSApp activateIgnoringOtherApps:YES];
+    return winController;
+}
 
 /***
  Show the AutoCreate Window
  */
 - (IBAction)manageAutoCreate:(id)sender {
-    
-    if ([acmwc window] == nil) {
-        
-        acmwc = [[NSWindowController alloc] initWithWindowNibName:@"AutoCreateManager"];
-        
-    }
-    
-    [[acmwc window] makeKeyAndOrderFront:nil];
-    [NSApp activateIgnoringOtherApps:YES];
-    
+    acmwc = [self showControllerWithID:@"autoCreateManagerWinController"];
 }
 
 /***
