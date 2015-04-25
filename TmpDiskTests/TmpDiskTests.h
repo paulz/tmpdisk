@@ -6,8 +6,8 @@
 //  Copyright (c) 2011 Ink Scribbles Pty Ltd. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface TmpDiskTests : SenTestCase
+@interface TmpDiskTests : XCTestCase
 
 @end
