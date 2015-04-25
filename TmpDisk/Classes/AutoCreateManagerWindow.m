@@ -36,8 +36,8 @@
         
         for (NSDictionary *d in autoCreateArray) {
             
-            NSString *name = [d objectForKey:@"name"];
-            NSNumber *size = [d objectForKey:@"size"];
+            NSString *name = d[@"name"];
+            NSNumber *size = d[@"size"];
             
             if (name && size) {
                 // Only add valid entries
@@ -66,9 +66,9 @@
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
     
     if ([[aTableColumn identifier] isEqualToString:@"name"]) {
-        return [[autoCreateDisks objectAtIndex:rowIndex] objectForKey:[aTableColumn identifier]];
+        return autoCreateDisks[rowIndex][[aTableColumn identifier]];
     } else {
-        u_int64_t size = [[[autoCreateDisks objectAtIndex:rowIndex] objectForKey:[aTableColumn identifier]] unsignedLongLongValue];
+        u_int64_t size = [autoCreateDisks[rowIndex][[aTableColumn identifier]] unsignedLongLongValue];
         return [NSString stringWithFormat:@"%llu MB", ((size * 512)/(1024 * 1024))];
     }
     

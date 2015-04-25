@@ -38,16 +38,16 @@
     NSString *argSize = nil;
     // TODO: There's likely a better way to parse command line args
     for (NSUInteger i=0, n=[arguments count]; i<n; i++) {
-        NSString *s = [arguments objectAtIndex:i];
+        NSString *s = arguments[i];
         
         // We expect args in the format -argname=argval
         
         NSArray *arg = [s componentsSeparatedByString:@"="];
         if ([arg count] == 2) {
-            if ([[arg objectAtIndex:0] isEqualToString:@"-name"]) {
-                argName = [NSString stringWithString:[arg objectAtIndex:1]];
-            } else if ([[arg objectAtIndex:0] isEqualToString:@"-size"]) {
-                argSize = [NSString stringWithString:[arg objectAtIndex:1]];
+            if ([arg[0] isEqualToString:@"-name"]) {
+                argName = [NSString stringWithString:arg[1]];
+            } else if ([arg[0] isEqualToString:@"-size"]) {
+                argSize = [NSString stringWithString:arg[1]];
             }
         }
     }
@@ -70,10 +70,10 @@
         
         for (NSDictionary *d in autoCreateArray) {
             
-            NSString *name = [d objectForKey:@"name"];
-            NSNumber *size = [d objectForKey:@"size"];
-            NSNumber *indexed = [d objectForKey:@"indexed"];
-            NSNumber *hidden = [d objectForKey:@"hidden"];
+            NSString *name = d[@"name"];
+            NSNumber *size = d[@"size"];
+            NSNumber *indexed = d[@"indexed"];
+            NSNumber *hidden = d[@"hidden"];
             
             if (name && size) {
                 

@@ -40,8 +40,7 @@
         NSArray  *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginItems, &seedValue));
         
         for(int i = 0 ; i< [loginItemsArray count]; i++){
-            LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)[loginItemsArray
-                                                                        objectAtIndex:i];
+            LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)loginItemsArray[i];
             //Resolve the item with URL
             if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &url, NULL) == noErr) {
                 NSString * urlPath = [(__bridge NSURL*)url path];
@@ -152,8 +151,7 @@
             NSArray  *loginItemsArray = (NSArray *)CFBridgingRelease(LSSharedFileListCopySnapshot(loginItems, &seedValue));
             
             for(int i = 0 ; i< [loginItemsArray count]; i++){
-                LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)[loginItemsArray
-                                                                            objectAtIndex:i];
+                LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef)loginItemsArray[i];
                 //Resolve the item with URL
                 if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &url, NULL) == noErr) {
                     NSString * urlPath = [(__bridge NSURL*)url path];

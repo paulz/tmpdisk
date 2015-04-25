@@ -24,7 +24,7 @@
 
 @implementation TmpDiskMenuItem
 
-- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode eject:(SEL)ejSelector {
+- (instancetype)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode eject:(SEL)ejSelector {
     
     
     self = [super initWithTitle:aString action:aSelector keyEquivalent:charCode];
@@ -58,7 +58,7 @@
     
 }
 
-- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode ejectBlock:(void (^)(NSString*))block {
+- (instancetype)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode ejectBlock:(void (^)(NSString*))block {
     
     
     self = [super initWithTitle:aString action:aSelector keyEquivalent:charCode];

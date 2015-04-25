@@ -58,15 +58,15 @@
         
         // Holds the current disk values to replicate
         NSMutableDictionary *curDisk = [NSMutableDictionary dictionary];
-        [curDisk setObject:name forKey:@"name"];
-        [curDisk setObject:[NSNumber numberWithUnsignedLongLong:size] forKey:@"size"];
-        [curDisk setObject:[NSNumber numberWithBool:indexed] forKey:@"indexed"];
-        [curDisk setObject:[NSNumber numberWithBool:hidden] forKey:@"hidden"];
+        curDisk[@"name"] = name;
+        curDisk[@"size"] = @(size);
+        curDisk[@"indexed"] = @(indexed);
+        curDisk[@"hidden"] = @(hidden);
         
         // Check whether same name exists in autoCreate already
         bool exists = false;
         for (NSDictionary *d in autoCreateArray) {
-            if ([[d objectForKey:@"name"] compare:name options:NSCaseInsensitiveSearch] == NSOrderedSame) {
+            if ([d[@"name"] compare:name options:NSCaseInsensitiveSearch] == NSOrderedSame) {
                 exists = true;
                 break;
             }
@@ -101,7 +101,7 @@
         command = [NSString stringWithFormat:@"diskutil erasevolume HFS+ \"%@\" `hdiutil attach -nomount ram://%llu`", name, size];
     }
     
-    NSArray *arguments = [NSArray arrayWithObjects: @"-c", command, nil];
+    NSArray *arguments = @[@"-c", command];
     
     [task setArguments:arguments];
     
@@ -112,8 +112,8 @@
         [indexTask setLaunchPath: @"/bin/sh"];
         
         NSArray *arguments;
-        arguments = [NSArray arrayWithObjects: @"-c",
-                     [NSString stringWithFormat:@"mdutil -i on /Volumes/%@", name], nil];
+        arguments = @[@"-c",
+                     [NSString stringWithFormat:@"mdutil -i on /Volumes/%@", name]];
         
         [indexTask setArguments:arguments];
     }
@@ -150,9 +150,7 @@
     [task launch];
     [task waitUntilExit];
     
-    NSDictionary *tmpProps = [NSDictionary dictionaryWithObjects:
-                              [NSArray arrayWithObjects:[NSNumber numberWithBool:NO], nil] forKeys:
-                              [NSArray arrayWithObjects:@"backup", nil]];
+    NSDictionary *tmpProps = @{@"backup": @NO};
     
     [tmpProps writeToFile:[NSString stringWithFormat:@"/Volumes/%@/.tmpdisk", name] atomically:YES];
     

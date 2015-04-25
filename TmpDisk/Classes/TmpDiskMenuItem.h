@@ -32,9 +32,9 @@ typedef void (^EjectBlock)(NSString*);
 }
 
 
-- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode eject:(SEL)ejSelector;
+- (instancetype)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode eject:(SEL)ejSelector NS_DESIGNATED_INITIALIZER;
 
-- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode ejectBlock:(void (^)(NSString*))block;
+- (instancetype)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode ejectBlock:(void (^)(NSString*))block NS_DESIGNATED_INITIALIZER;
 
 - (void)runSelectBlock:(id)sender;
 
